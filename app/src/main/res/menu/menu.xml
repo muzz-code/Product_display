@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Product" android:icon="@drawable/wallet"/>
+    <item android:title="Payment" android:icon="@drawable/openwallet"/>
+    <item android:title="History" android:icon="@drawable/ic_clock__2__1"/>
+    <item android:title="Support" android:icon="@drawable/love"/>
+    <item android:title = "More" android:icon="@drawable/more_icon"/>
+
+</menu>

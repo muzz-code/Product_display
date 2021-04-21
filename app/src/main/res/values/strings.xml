@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">week 4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="partners">Partners</string>
+    <string name="dollar">$</string>
+    <string name="image_view8">ImageView8</string>
+    <string name="digits">231,423,241</string>
+    <string name="cash_loan">Cash Loan</string>
+    <string name="credit_card">Credit card</string>
+    <string name="qr_code">QR Code</string>
+    <string name="utilities">Utilities</string>
+    <string name="mobile">Mobile</string>
+    <string name="transfer">Transfer</string>
+    <string name="specials">Specials</string>
+    <string name="todo">ImageView7</string>
+    <string name="image_view_main">ImageViewMain</string>
+    <string name="ola_machiavelli">Ola Machiavelli</string>
+    <string name="notification">A notification bell</string>
+    <string name="aliexpress">AliExpress</string>
+</resources>
