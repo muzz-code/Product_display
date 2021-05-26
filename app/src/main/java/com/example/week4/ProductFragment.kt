@@ -1,12 +1,10 @@
 package com.example.week4
 
-import android.graphics.Color.blue
-import android.graphics.Color.red
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -19,14 +17,16 @@ import com.example.week4.model.PartnersData
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_products.*
 
-
 class ProductFragment : Fragment() {
 
     lateinit var viewPager: ViewPager2
     lateinit var recyclerView: RecyclerView
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_products, container, false)
 
@@ -47,11 +47,8 @@ class ProductFragment : Fragment() {
         debitCards.add(Data("Jesse", "24,133,393.00", R.color.teal_700))
         debitCards.add(Data("Mary", "22,133,642.00", R.color.black))
 
-
-
         /*Set-Up ViewPager Adapter*/
-       val viewPagerAdapter = DataAdapter(debitCards)
-
+        val viewPagerAdapter = DataAdapter(debitCards)
 
         viewPager.apply {
             adapter = viewPagerAdapter
@@ -69,7 +66,6 @@ class ProductFragment : Fragment() {
         }
 
         viewPager.setPageTransformer(compositePageTransformer)
-
 
         /*Set-Up Dot Indicator*/
         TabLayoutMediator(tabIndicator, viewPager) { tab, position ->
@@ -89,7 +85,6 @@ class ProductFragment : Fragment() {
         partnersList.add(PartnersData("Apple", "from 6.2%", "Laptops"))
         partnersList.add(PartnersData("Target", "from 2.4%", "Merchandise"))
 
-
         /*Initialize Layout Manager and Adapter*/
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val recyclerViewAdapter = PartnersRvAdapter(partnersList)
@@ -101,7 +96,6 @@ class ProductFragment : Fragment() {
 
     companion object {
         fun newInstance() =
-                ProductFragment()
-
+            ProductFragment()
     }
 }

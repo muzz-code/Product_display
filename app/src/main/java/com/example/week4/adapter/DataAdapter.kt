@@ -5,6 +5,8 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week4.R
@@ -16,7 +18,9 @@ class DataAdapter(private val debitCardList: ArrayList<Data>) :
 
 
     class PagerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
+        val cardName: TextView = view.findViewById(R.id.textView4)
+        val cardBalance: TextView = view.findViewById(R.id.textView2)
+        val card: ImageView = view.findViewById(R.id.debit_card)
     }
 
 
@@ -28,17 +32,13 @@ class DataAdapter(private val debitCardList: ArrayList<Data>) :
 
 
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
-        holder.itemView.apply {
+        val debitCard = debitCardList[position]
 
-
-            val debitCard = debitCardList[position]
-
-
-            textView4.text = debitCard.name
-            textView2.text = debitCard.balance
-
-            debit_card.backgroundTintList =
-                ColorStateList.valueOf(ContextCompat.getColor(this.context, debitCard.color))
+        holder.apply {
+            cardName.text = debitCard.name
+            cardBalance.text = debitCard.balance
+            card.backgroundTintList =
+                ColorStateList.valueOf(ContextCompat.getColor(itemView.context, debitCard.color))
 
         }
     }

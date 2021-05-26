@@ -8,15 +8,15 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/debit_card"
-        android:layout_width="240dp"
-        android:layout_height="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@color/black"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,6 +28,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="24dp"
+                android:textSize="16sp"
                 android:text="Darrot"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -41,9 +43,11 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Debit Card"
                 android:textColor="@color/white"
                 android:textSize="10dp"
+                android:layout_marginBottom="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.097"
